@@ -7,6 +7,7 @@ export default function Home() {
         <title>Intro to NEXT.js</title>
         <meta name="keywords" content="web development, js" />
       </Head>
+      <h1 className="text-center">Welcome to NEXT.js</h1>
     </div>
   );
 }

@@ -1,16 +1,12 @@
 import "../styles/globals.css";
-import Layout from "../components/Layout";
 import Navbar from "../components/Navbar";
-import Maps from "../components/Maps";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div>
+    <div className="container">
       <Navbar />
-      <Layout>
-        <Maps />
-        <Component {...pageProps} />
-      </Layout>
+      <Component {...pageProps} />
     </div>
   );
 }

@@ -1,14 +1,11 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min";
-import $ from "jquery";
-import Popper from "popper.js";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <div className="container">
+    <div className="container mb-4">
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <a className="navbar-brand" href="#">
-          NEXT.js
+        <a className="navbar-brand" href="/">
+          NEXT.js with Maps
         </a>
         <button
           className="navbar-toggler"
@@ -24,15 +21,16 @@ const Navbar = () => {
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
-              <a className="nav-link" href="#">
-                Home <span className="sr-only">(current)</span>
-              </a>
-            </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                About
-              </a>
+              <Link href="/about">
+                <a className="nav-link">About</a>
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link className="nav-link" href="/selectCoord">
+                <a className="nav-link">Store Coordinates</a>
+              </Link>
             </li>
           </ul>
         </div>
